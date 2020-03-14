@@ -3,7 +3,7 @@ import React from 'react'
 import * as actions from '../../redux-flow/reducers/visibility-filter/actions'
 import FilterLink from './filter-link'
 
-const Filter = ({}) => (
+const Filter = () => (
   <div>
     <h3>Mostrar</h3>
     {filterItems.map(item => {
