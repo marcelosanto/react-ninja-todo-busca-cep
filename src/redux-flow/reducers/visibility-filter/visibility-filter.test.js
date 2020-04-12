@@ -1,4 +1,4 @@
-import visibilityFilter, { initialState } from './index'
+import visibilityFilter from './index'
 import { expect } from 'chai'
 import deepFreeze from 'deep-freeze'
 
@@ -42,25 +42,6 @@ it('should show just active todos', () => {
     payload: { filter: SHOW_ACTIVE },
   })
   const after = SHOW_ACTIVE
-
-  expect(visibilityFilter(before, action)).to.be.equal(after)
-})
-
-it('should return latest state when action is unknow', () => {
-  const before = SHOW_COMPLETED
-  const action = deepFreeze({
-    type: 'UNKNOWN',
-    payload: { filter: SHOW_ALL },
-  })
-  const after = SHOW_COMPLETED
-
-  expect(visibilityFilter(before, action)).to.be.equal(after)
-})
-
-it('should return initialState when latest state is undefined', () => {
-  const before = undefined
-  const action = deepFreeze({})
-  const after = initialState
 
   expect(visibilityFilter(before, action)).to.be.equal(after)
 })

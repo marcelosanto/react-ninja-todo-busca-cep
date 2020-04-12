@@ -1,20 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
 import App from './App'
-import reducer from './redux-flow/reducers'
+import configureStore from './redux-flow/configure-store'
 
-const store = createStore(reducer)
-
-store.subscribe(() => {
-  console.log('state:', store.getState())
-})
+const store = configureStore()
 
 ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById('root'),
+  document.getElementById('root')
 )

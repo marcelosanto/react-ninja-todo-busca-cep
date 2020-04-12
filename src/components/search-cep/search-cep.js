@@ -1,5 +1,4 @@
 import React from 'react'
-import ajax from '@fdaciuk/ajax'
 
 const SearchCep = ({
   cep,
