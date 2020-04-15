@@ -1,5 +1,3 @@
-'use strict'
-
 export const SET_VISIBILITY_FILTER = 'visibilityFilter:SET_VISIBILITY_FILTER'
 
 export const SHOW_ALL = 'visibilityFilter:SHOW_ALL'
